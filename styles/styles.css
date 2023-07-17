@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Red+Hat+Display:wght@500;700;900&family=Roboto:wght@100&display=swap');
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 10;
+    position: sticky;
+    top: 0;
+}
+
+li{
+    display: inline-block;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: #fafafa;
+    padding: 0 20px;
+}
+
+.boton{
+    background-color: #84BDF3;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    color: #fafafa;
+    text-transform: uppercase;
+}
+
+/* *Clase 4 */
+/* *Aplicamos Grid y Flex */
+
+.contenedorCursos{
+    display: grid;
+    /* Nosotros podemos decirle al sistema las filas y columas que queremos o trabajando por areas, dependiendo de lo que quiera hacer voy a elegir una opcion o la otra */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    margin: 3rem 0;
+}
+
+.curso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cursoImagen{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.cursoTitulo{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.cursoDescripcion{
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cursoPrecio{
+    font-size: 26px;
+    font-weight: bold;
+    color: #2ECC71;
+    text-align: center;
+    /* text-decoration: line-through; */
+}
+
+.cursoBtn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2ECC71;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-top: 15px;
+}
+
+/* *BANNER */
+/* *Estilos para el banner */
+
+.banner{
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    text-align: center;
+    padding: 100px;
+    color: #fff;
+}
+
+.banner h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner p{
+    font-size: 18px;
+}
+
+.button{
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+
+/* *Media Queries */
+@media(max-width:768px){
+    .contenedorCursos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:499px){
+    .contenedorCursos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
